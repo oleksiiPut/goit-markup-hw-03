@@ -5,9 +5,28 @@
   --text-item-color: #757575;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-color);
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .list {
@@ -18,11 +37,50 @@ body {
   text-decoration: none;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 /* HEADER */
 
 .header-site {
   background: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  background-color: #ffffff;
+
+  border-bottom: 1px solid #ececec;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
 .header-logo {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -31,7 +89,9 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+  margin-right: 93px;
 }
+
 .logo-web {
   color: var(--accent-color);
 }
@@ -40,17 +100,32 @@ body {
   color: var(--accent-color);
 }
 
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
+}
+
+.header-address {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-mail {
+  margin-right: 50px;
 }
 
 .header-mail,
@@ -73,7 +148,11 @@ body {
 
 .hero {
   background-color: var(--back-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
 }
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -82,19 +161,27 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  width: 696px;
+  margin: 0 auto 30px auto;
 }
 
 .hero-btn {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-  background-color: #2196f3;
-  cursor: pointer;
+  background-color: var(--accent-color);
+  text-align: center;
+  padding: 10px 32px;
+  min-width: 200px;
+  min-height: 50px;
+
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 4px;
+  border: none;
 }
 
 .hero-btn:hover,
@@ -102,26 +189,29 @@ body {
   background-color: #188ce8;
 }
 
-/* Кнопки фильтра в портфолио */
-
-.filter-btn {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  background-color: #f5f4fa;
-  cursor: pointer;
-}
-
-.filter-btn:hover,
-.filter-btn:focus {
-  color: #ffffff;
-  background-color: var(--accent-color);
-}
-
 /* Особенности */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.specifics {
+  background-color: #ffffff;
+  padding-bottom: 0;
+}
+
+.specifics-list {
+  display: flex;
+}
+
+.specifics-item {
+  width: 270px;
+}
+
+.specifics-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 .specifics-item-title {
   font-weight: bold;
@@ -130,10 +220,10 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .specifics-item-text {
-  font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -141,6 +231,10 @@ body {
 }
 
 /* Чем мы занимаемся */
+
+.about-list {
+  display: flex;
+}
 
 .about-title,
 .team-title {
@@ -150,6 +244,11 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  margin-bottom: 50px;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Команда */
@@ -158,14 +257,30 @@ body {
   background: #f5f4fa;
 }
 
-/* .team-title {
-  font-weight: bold;
+.team-item {
+  background-color: #ffffff;
+  width: 270px;
+  padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-title {
+  /* font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
-} */
+  color: #212121; */
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+}
 
 .team-item-title {
   font-weight: 500;
@@ -174,6 +289,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .team-item-text {
@@ -185,7 +301,72 @@ body {
   color: var(--text-item-color);
 }
 
-/* Примеры работ */
+.img-text {
+  margin-top: 30px;
+}
+
+/* Кнопки фильтра в портфолио */
+
+.filter-list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+
+  padding: 6px 22px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/* Примеры работ в портфолио*/
+
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.examples-list > .examples-item {
+  background-color: #ffffff;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+/* .examples-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.examples-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+} */
+
+.img-portfolio-text {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
 
 .examples-item-title {
   font-weight: bold;
@@ -196,7 +377,6 @@ body {
 }
 
 .examples-item-text {
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
@@ -207,6 +387,8 @@ body {
 
 .footer-site {
   background-color: var(--back-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   font-family: 'Raleway';
@@ -216,6 +398,14 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.footer-address {
+  margin-top: 20px;
+}
+
+.footer-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-item {
