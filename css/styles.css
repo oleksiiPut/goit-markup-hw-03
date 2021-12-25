@@ -64,11 +64,7 @@ body {
 /* HEADER */
 
 .header-site {
-  background: #ffffff;
-  padding-top: 24px;
-  padding-bottom: 25px;
   background-color: #ffffff;
-
   border-bottom: 1px solid #ececec;
 }
 
@@ -104,6 +100,11 @@ body {
   margin-right: 50px;
 }
 
+.header-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -124,7 +125,7 @@ body {
   margin-left: auto;
 }
 
-.header-mail {
+.header-item-address:first-child {
   margin-right: 50px;
 }
 
@@ -150,7 +151,6 @@ body {
   background-color: var(--back-color);
   padding-top: 200px;
   padding-bottom: 200px;
-  display: flex;
 }
 
 .hero-title {
@@ -161,7 +161,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  width: 696px;
+  max-width: 696px;
   margin: 0 auto 30px auto;
 }
 
@@ -254,7 +254,7 @@ body {
 /* Команда */
 
 .team {
-  background: #f5f4fa;
+  background-color: #f5f4fa;
 }
 
 .team-item {
@@ -290,6 +290,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .team-item-text {
@@ -299,6 +301,8 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-item-color);
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .img-text {
@@ -346,7 +350,7 @@ body {
   margin-top: -30px;
 }
 
-.examples-list > .examples-item {
+.examples-item {
   background-color: #ffffff;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
@@ -374,6 +378,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color);
+  margin-bottom: 4px;
 }
 
 .examples-item-text {
