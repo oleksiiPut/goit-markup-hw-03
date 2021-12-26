@@ -100,11 +100,6 @@ body {
   margin-right: 50px;
 }
 
-.header-nav {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -113,6 +108,7 @@ body {
   color: var(--text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  display: block;
 }
 
 .header-link:hover,
@@ -260,7 +256,6 @@ body {
 .team-item {
   background-color: #ffffff;
   width: 270px;
-  padding-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -290,8 +285,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-bottom: 10px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .team-item-text {
@@ -301,12 +294,10 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-item-color);
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .img-text {
-  margin-top: 30px;
+  padding: 30px 15px;
 }
 
 /* Кнопки фильтра в портфолио */
