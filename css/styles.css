@@ -126,7 +126,7 @@ p {
 
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0 292px;
+  padding: 188px 0;
 }
 
 .hero-title {
@@ -301,7 +301,7 @@ p {
 
 .footer-logo {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .footer-logo-span {
