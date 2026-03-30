@@ -1,4 +1,4 @@
-/* -----COMMON----- */
+/* -----RESET----- */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -24,8 +24,6 @@ img {
 
 a {
   text-decoration: none;
-  font-style: normal;
-  color: inherit;
 }
 
 p,
@@ -38,14 +36,7 @@ h6 {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #2e2f42;
-}
+/* ---COMMON--- */
 
 .container {
   max-width: 1158px;
@@ -72,6 +63,8 @@ h6 {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-style: normal;
+  color: inherit;
 }
 
 .header-logo {
@@ -99,6 +92,8 @@ h6 {
   font-size: inherit;
   display: block;
   padding: 24px 0;
+  font-style: normal;
+  color: inherit;
 }
 
 .navigation-link:hover,
@@ -120,6 +115,8 @@ h6 {
   color: #434455;
   display: block;
   padding: 24px 0;
+  font-style: normal;
+  color: inherit;
 }
 
 .address-link:hover,
@@ -174,6 +171,7 @@ h6 {
 }
 
 .features-item-title {
+  color: #2e2f42;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.02em;
